@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Navbar({ user, onLogout }) {
   return (
     <nav className="bg-blue-600 text-white px-6 py-3 flex justify-between items-center">
