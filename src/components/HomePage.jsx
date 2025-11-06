@@ -5,6 +5,7 @@ import { ProtectedRoute} from "./ProtectedRoute"
 import { SignIn} from "./SignIn"
 import { SignUp} from "./SignUp"
 import { Livemap } from "./Livemap"
+import { HeroSection } from './HeroSection';
 
 
 export default function HomePage() {
@@ -19,7 +20,8 @@ export default function HomePage() {
     <div>
       <Navbar user={user} onLogout={handleLogout} />
         <Routes>
-          <Route path="/" element={<ProtectedRoute><Livemap /></ProtectedRoute>} />
+          <Route path='/' element={<HeroSection />}/>
+          <Route path="/livemap" element={<ProtectedRoute><Livemap /></ProtectedRoute>} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
